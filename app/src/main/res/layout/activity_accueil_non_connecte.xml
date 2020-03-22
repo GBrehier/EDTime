@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_centerHorizontal="true"
+    tools:context=".AccueilNonConnecte">
+
+    <TextView
+        android:id="@+id/titre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="150dp"
+        android:text="Renseignement"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/texteNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titre1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="70dp"
+        android:text="Saisissez votre nom :" />
+
+    <EditText
+        android:id="@+id/editTextNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texteNom"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonRenseignement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titre1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="316dp"
+        android:text="Confirmer" />
+
+    <TextView
+        android:id="@+id/texteTemps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texteNom"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="90dp"
+        android:text="Temps nécessaire pour vous rendre à l'IUT :" />
+
+    <EditText
+        android:id="@+id/editTextTemps"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texteTemps"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/texteMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextTemps"
+        android:layout_alignBottom="@+id/editTextTemps"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_toEndOf="@+id/editTextTemps"
+        android:text="minutes" />
+</RelativeLayout>

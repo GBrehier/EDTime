@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">EDTime</string>
+    <string name="texteBoutonDebut">Commencer</string>
+    <string name="texteDebut">Bienvenue sur EDTime !</string>
+    <string name="logoAppli">Logo de l\'application</string>
+
+</resources>
