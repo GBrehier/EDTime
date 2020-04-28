@@ -4,5 +4,16 @@
     <string name="texteBoutonDebut">Commencer</string>
     <string name="texteDebut">Bienvenue sur EDTime !</string>
     <string name="logoAppli">Logo de l\'application</string>
+    <string name="texteTemps">Temps nécessaire pour vous rendre à l\'IUT : </string>
 
+    <string-array name="jours">
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+    </string-array>
+
+    <string name="appwidget_text">Cours du jour :</string>
+    <string name="add_widget">Add widget</string>
 </resources>

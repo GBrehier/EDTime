@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +10,89 @@
         android:id="@+id/texteUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
         android:text="Connecté"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="200dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewEDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/texteUser"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:text="Emploi du temps : " />
+
+    <Button
+        android:id="@+id/buttonEDT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewEDT"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="Renseigner" />
+
+    <TextView
+        android:id="@+id/textViewTemps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewEDT"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/texteTemps" />
+
+    <TextView
+        android:id="@+id/textViewNumTemps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTemps"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTemps"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/textViewNumTemps"
+        android:text="minutes" />
+
+    <Button
+        android:id="@+id/buttonModifierTemps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTemps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Modifier" />
+
+    <Button
+        android:id="@+id/buttonValiderTemps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTemps"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Valider"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/editTextModifierTemps"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTemps"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:visibility="invisible" />
+</RelativeLayout>

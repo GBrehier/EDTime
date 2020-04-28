@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AccueilNonConnecte extends AppCompatActivity {
 
@@ -23,24 +24,37 @@ public class AccueilNonConnecte extends AppCompatActivity {
 
         final EDTimeBDD bd = new EDTimeBDD(this);
 
-
         boutonConfirmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bd.open();
+                if (!isEmpty(editTextNom)&& !isEmpty(editTextTemps)) {
+                    int temps = Integer.valueOf(editTextTemps.getText().toString());
+                    if (temps > 0 && temps < 60) { // si le temps est positif
 
-                String nom = editTextNom.getText().toString();
-                int temps = Integer.valueOf(editTextTemps.getText().toString());
+                        bd.open();
 
-                bd.insertUser(nom,temps);
-                bd.close();
+                        String nom = editTextNom.getText().toString();
 
-                Intent intent = new Intent(AccueilNonConnecte.this, AccueilConnecte.class);
-                startActivity(intent);
+                        bd.insertUser(nom, temps);
+                        bd.close();
 
+                        Intent intent = new Intent(AccueilNonConnecte.this, AccueilConnecte.class);
+                        startActivity(intent);
+                    }else{
+                        Toast toast = Toast.makeText(getApplicationContext(), "Le temps doit être entre 0 et 59", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+
+                }else{
+                    Toast toast = Toast.makeText(getApplicationContext(), "Un ou des champs sont vides", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
             }
         });
 
 
+    }
+    private boolean isEmpty(EditText etText) {
+        return etText.getText().toString().trim().length() == 0;
     }
 }

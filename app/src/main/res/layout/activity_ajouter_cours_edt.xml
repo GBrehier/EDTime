@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AjouterCoursEdt">
+
+    <TextView
+        android:id="@+id/textViewMatiere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHeure"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Matière : " />
+
+    <TextView
+        android:id="@+id/textViewTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:text="Ajouter un cours"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewJour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitre"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:text="Journée du cours : " />
+
+    <TextView
+        android:id="@+id/textViewHeure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewJour"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Heure du cours : " />
+
+    <TextView
+        android:id="@+id/textViewSalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMatiere"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Salle du cours : " />
+
+    <CheckBox
+        android:id="@+id/checkBoxReveil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSalle"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Définir un réveil"
+        android:textColor="#8A000000" />
+
+    <EditText
+        android:id="@+id/editTextMatiere"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHeure"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/textViewMatiere"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextSalle"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMatiere"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/textViewSalle"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextHeure"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewJour"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/textViewHeure"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editTextMinute"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewJour"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/textViewH"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewJour"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/editTextHeure"
+        android:text="h" />
+
+    <Button
+        android:id="@+id/buttonAjouter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:text="Ajouter" />
+
+    <Spinner
+        android:id="@+id/spinnerJour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitre"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_toEndOf="@+id/textViewJour" />
+</RelativeLayout>
